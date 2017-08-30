@@ -1,0 +1,78 @@
+body>div
+{
+    width:950px;
+    margin:auto;
+}
+
+.collection {
+    margin: 0.5rem 0 1rem 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+
+.collection a.collection-item {
+    background-color: #fff;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.collection .collection-item:not(.active):hover {
+    background-color: #ddd;
+  }
+
+div.profil
+{
+    padding:20px;
+    border: 1px solid #e0e0e0;
+}
+
+
+div.profil span
+{
+    display: inline-block;
+    width:107px;
+    background-color: #e0e0e0;
+    padding:2px 0 2px 4px;
+    border-radius: 10px;
+    margin-bottom:10px;
+}
+
+a, a:visited, a:link
+{
+    color:inherit;
+}
+
+.gauche
+{
+    padding-left:30px;
+	float:left;
+	width:470px;
+}
+
+.droite
+{
+    padding-right:30px;
+	float:right;
+	width:470px;
+}
+
+.clear
+{
+    clear:both;
+}
+
+.sub
+{
+    width:100px;
+    margin:auto;
+}
+
+.titre_div_modal
+{
+    margin-top:20px;
+    margin-left:30px;
+}

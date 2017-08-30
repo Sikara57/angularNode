@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Angular</title>
+		<!-- Materialize CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+		<link rel="stylesheet" href="app/style.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>		
+	</head>
+	<body>
+		<div ng-app="myApp" >
+			<ul>
+				<li><a href="./">home</a></li>
+				<li><a href="#!/liste">Liste</a></li>			
+			</ul>
+			<div ng-view></div>
+		</div>
+		<script src="app/myApp.js"></script>
+		<script src="app/controller/myCtrl.js"></script>
+		<script src="app/controller/myCtrl2.js"></script>
+		<script src="app/controller/profil.js"></script>
+		<script src="app/directive/myDir.js"></script>
+		<script src="app/service/eleveService.js"></script>
+	</body>
+</html>

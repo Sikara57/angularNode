@@ -1,0 +1,21 @@
+<div>
+    <form name="myForm">
+        <div input-field>
+            <input type="text" ng-model="person.firstName" length="150"><label>Prénom</label> <br>
+        </div>
+        <div input-field>
+            <input type="text" ng-model="person.lastName" length="150"><label>Nom</label><br>
+        </div>
+        <div input-field>
+            <input type="email" ng-model="person.mail" length="150" ><label>Mail</label><br>
+        </div>
+
+        
+        <!-- <button type="submit"></button> -->
+    </form>
+    <button ng-click="submitForm()">valider</button>
+    <!-- {{ person.firstName + " " + person.lastName }}<br> -->
+    {{person}} <br>
+    {{factory}}
+</div>
+<div data-my-first-dir></div>

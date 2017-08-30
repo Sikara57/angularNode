@@ -1,0 +1,44 @@
+<div>
+    <i data-target='new' class="material-icons" modal ng-init="parametre.ajout=1; person={}">add</i>
+    <ul class="collection">
+        <li ng-repeat="n in maListe" class="collection-item">
+            {{n.nom}}&nbsp;{{n.prenom}}
+            <i class="material-icons right" ng-click="deleteEleve(n)">close</i>
+            <i data-target='new' class="material-icons right" modal ng-click="updateEleve(n)">edit</i>
+            <a  ng-href="#!/eleve/{{n._id}}" ><i class="material-icons right">account_circle</i></a>
+            
+        </li>
+    </ul>
+    <!-- <my-first-dir></my-first-dir> -->
+    <div data-my-first-dir></div>
+    <!-- <div class="my-first-dir"></div> -->
+</div>
+
+<div id="new" class="modal">
+    <div class="moda-content">
+        <h5 class="titre_div_modal">Ajout d'un nouvel Eleve:</h5>
+        <form  name="formulaire" id="formulaire">
+            <input type="hidden" name="id" id="id" ng-value="person._id">
+            <div class="gauche">
+                <input type="text" name="nom" id="nom" ng-model="person.nom"><label for="nom">Nom</label>
+                <input type="text" name="prenom" id="prenom" ng-model="person.prenom"><label for="prenom">Prénom</label>
+                <input type="text" name="javascript" id="javascript" ng-model="person.javascript"><label for="javascript">Javascript</label>
+                <input type="text" name="fav_web" id="fav_web" ng-model="person.fav_web"><label for="fav_web">Site Favoris</label>
+                <textarea class="materialize-textarea" name="fav_web_why" id="fav_web_why" cols="30" rows="10" ng-model="person.fav_web_why"></textarea><label for="fav_web_why">Pourquoi ?</label>
+            </div>
+            <div class="droite">
+                <input type="text" name="fav_app" id="fav_app" ng-model="person.fav_app"><label for="fav_app">Application Favorite</label>
+                <textarea name="fav_app_why" id="fav_app_why" cols="30" rows="10" class="materialize-textarea" ng-model="person.fav_app_why"></textarea><label for="">Pourquoi ?</label>
+                <input type="text" name="before_ifa" id="before_ifa" ng-model="person.before_ifa"><label for="before_ifa">Avant l'ifa</label>
+                <textarea name="why_ifa" id="why_ifa" cols="30" rows="10" class="materialize-textarea" ng-model="person.why_ifa"></textarea><label for="why_ifa">Pourquoi ?</label>
+                <input type="email" name="contact_mail" id="contact_mail" ng-model="person.contact_mail"><label for="mail">Contact Mail</label>
+            </div>
+            <div class="clear"></div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        
+        <a href="#!/liste" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        <div class="sub"><button class="btn modal-close" ng-click="ajoutEleve(person,parametre.ajout)">Envoyer</button></div>
+    </div>
+</div>

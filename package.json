@@ -1,0 +1,23 @@
+{
+  "name": "angularnode",
+  "version": "1.0.0",
+  "description": "server node avec angular cote client",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "node;angular"
+  ],
+  "author": "daniel GIRARD",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.9",
+    "ui-router": "^1.0.0-alpha.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
