@@ -11,12 +11,14 @@ app.controller("myCtrl2", function($scope, $rootScope,$http,liste, eleveFactory)
 
     $scope.maListe=liste;
 
-    $scope.deleteEleve = function(eleve){
-        console.log(eleve);
+    $scope.deleteEleve = function(eleve,index){
+        // console.log(eleve);
         eleveFactory.delete({userId:eleve._id});
         //permet de supprimer aussi l'affichage
-        $scope.maListe.splice($scope.maListe.indexOf(eleve),1);
+        $scope.maListe.splice(index,1);
     };
+
+    // Avec socket.io on fait un $scope.splice puis un $scope.$apply()
 
     $scope.updateEleve = function (eleve)
     {

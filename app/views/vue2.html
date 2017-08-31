@@ -3,7 +3,7 @@
     <ul class="collection">
         <li ng-repeat="n in maListe" class="collection-item">
             {{n.nom}}&nbsp;{{n.prenom}}
-            <i class="material-icons right" ng-click="deleteEleve(n)">close</i>
+            <i class="material-icons right" ng-click="deleteEleve(n,$index)">close</i>
             <i data-target='new' class="material-icons right" modal ng-click="updateEleve(n)">edit</i>
             <a  ng-href="#!/eleve/{{n._id}}" ><i class="material-icons right">account_circle</i></a>
             

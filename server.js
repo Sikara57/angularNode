@@ -3,6 +3,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var Eleve= require('./models/eleve.js');
 var app = express();
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
 
 //connexion db
 var promise=mongoose.connect('mongodb://localhost:27017/ifa',{
@@ -12,11 +14,20 @@ var promise=mongoose.connect('mongodb://localhost:27017/ifa',{
 //quand la connexion est réussie
 promise.then(function(db){
     console.log('db.connected');
-    app.listen(3000, function() {
+    server.listen(3000, function() {
         console.log('listening on 3000 and database is connected');
     });
 
 });
+
+io.sockets.on('connection',function(socket){
+    console.log('user connected');
+    // socket.emit('monsocket',{hello : 'world'});
+    socket.on('disconnect',function(){
+        console.log('user disconnected');
+    })
+});
+
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -52,7 +63,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/api/liste', function(req, res) {
-    Eleve.find({},function(err, collection){
+    Eleve.find({},null,{sort:{nom:1}},function(err, collection){
         if(err){
             console.log(err);
             return res.send(500);

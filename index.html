@@ -15,6 +15,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
 	</head>
 	<body>
 		<div ng-app="myApp" >
@@ -30,5 +31,11 @@
 		<script src="app/controller/profil.js"></script>
 		<script src="app/directive/myDir.js"></script>
 		<script src="app/service/eleveService.js"></script>
+		<script>
+			var socket = io();
+			//socket.on('monsocket', function(socket){
+			//	console.log(socket);
+			//});
+		</script>
 	</body>
 </html>
